@@ -1,0 +1,23 @@
+<h1>Listing bubble_gums</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bubble_gums.each do |bubble_gum| %>
+  <tr>
+    <td><%= bubble_gum.name %></td>
+    <td><%= link_to 'Show', bubble_gum %></td>
+    <td><%= link_to 'Edit', edit_bubble_gum_path(bubble_gum) %></td>
+    <td><%= link_to 'Destroy', bubble_gum, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bubble gum', new_bubble_gum_path %>
